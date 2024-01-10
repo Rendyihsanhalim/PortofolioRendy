@@ -9,7 +9,7 @@ export default function HomePage() {
         <div className={styles.home__text} >
           <h1 data-scroll data-scroll-speed="0.7" className={styles.home__h1}>RENDY</h1>
           <p data-scroll data-scroll-speed="0.7"className={styles.home__paragraph}>
-            I'm Junior FrontEnd Developer Who Addicted make beautiful website
+            I&apos;m Junior FrontEnd Developer Who Addicted make beautiful website
           </p>
           <div data-scroll data-scroll-speed="0.7">
             <a  className={`${styles.button__home} ${styles.button_flex}`}>
