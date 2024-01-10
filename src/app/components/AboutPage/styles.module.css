@@ -2,7 +2,8 @@
     width: 100%;
     height: 1000px;
     background:linear-gradient(180deg,white,rgba(110, 103, 103, 0.445),rgba(110, 105, 105, 0.445),white);
-    margin-top: 11rem;
+    margin-top: 8rem;
+
   }
   
   .navigation_wrapper {
@@ -10,6 +11,7 @@
     margin-left: 50px;
     position: absolute;
     cursor: pointer;
+    
   }
   
   .navigation_container {

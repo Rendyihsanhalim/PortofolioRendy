@@ -11,17 +11,18 @@ export default function HomePage() {
           <p data-scroll data-scroll-speed="0.7"className={styles.home__paragraph}>
             I'm Junior FrontEnd Developer Who Addicted make beautiful website
           </p>
-          <div>
-            <a data-scroll data-scroll-speed="1" className={`${styles.button__home} ${styles.button_flex}`}>
+          <div data-scroll data-scroll-speed="0.7">
+            <a  className={`${styles.button__home} ${styles.button_flex}`}>
               Learn More <i className={`fa-solid fa-arrow-right ${styles.button__icon}`}></i>
             </a>
           </div>
         </div>
 
-        <div className={styles.home__circle}>
-          <img data-scroll data-scroll-speed="0.7" src="/assets/img/circle1.png" alt="" className={styles.home__circle1} />
-          <img data-scroll data-scroll-speed="0.7" src="/assets/img/circle2.png" alt="" className={styles.home__circle2} />
-          <img data-scroll data-scroll-speed="0.7" src="/assets/img/circle3.png" alt="" className={styles.home__circle3} />
+        <div className={styles.home__circle} data-scroll data-scroll-speed="1.5">
+          <img src="/assets/img/circle1.png" alt="" className={styles.home__circle1} />
+          <img src="/assets/img/circle2.png" alt="" className={styles.home__circle2} />
+          <img src="/assets/img/circle2.png" alt="" className={styles.home__circle3} />
+          <img src="/assets/img/circle1.png" alt="" className={styles.home__circle4} />
         </div>
       </div>
     </section>

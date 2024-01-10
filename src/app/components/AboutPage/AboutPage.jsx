@@ -1,47 +1,60 @@
 // pages/AboutPage.js
-import { useState,useRef,useEffect} from 'react';
+import { useState, useRef, useEffect } from 'react';
 import styles from './styles.module.css';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger'; // Import your CSS module
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function AboutPage() {
-  const [showAboutMe, setShowAboutMe] = useState(false);
-  const [showProjects, setShowProjects] = useState(false);
-
-  const toggleParagraph = (section) => {
-    setShowAboutMe(section === 'aboutMe' ? !showAboutMe : false);
-    setShowProjects(section === 'projects' ? !showProjects : false);
-  };
-
   const text = useRef(null);
+  const overlay = useRef(null);
+  const text1 =useRef(null);
 
-  useEffect( () => {
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.from(text.current, {
-        scrollTrigger: {
-            trigger: text.current,
-            scrub: true,
-            start: "top 500px",
-            end: "top 100px",
-        },
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      text.current,
+      {
         opacity: 0,
-        x: "-400",
-        ease: "power3.Out"
-    })
-}, [])
+        x: '-100%',
+      },
+      {
+        scrollTrigger: {
+          trigger: overlay.current,
 
+          start: 'top 150px',
+          end: 'top 300px',
+        },
+        opacity: 1,
+        x: '0%',
+      }
+    );
+    gsap.fromTo(
+      text1.current,
+      {
+        opacity: 0,
+        left: '-100%',
+      },
+      {
+        scrollTrigger: {
+          trigger: overlay.current,
+
+          start: 'top 50px',
+          end: 'top 300px',
+        },
+        opacity: 1,
+        left: '0%',
+      }
+    );
+  }, []);
 
   return (
-    <section className={styles.overlay}>
+    <section ref={overlay} className={styles.overlay}>
       <div className={styles.navigation_wrapper}>
-        <div className={styles.navigation_container}>
-          <div className={`${styles.navigation_item} ${showAboutMe ? styles.showLink : ''}`}>
-            <a ref={text} className={`${styles.navigation_link} ${styles.navigation_link1}`} onClick={() => toggleParagraph('aboutMe')}>
+          <div className={`${styles.navigation_item}`}>
+            <a ref={text} className={`${styles.navigation_link} ${styles.navigation_link1}`}>
               <span data-text="AboutMe">AboutMe</span>
-              <div
-                className={`${styles.hover_content} ${showAboutMe ? `${styles.show__paragraph} ${styles.slide_in}` : ''}`}
-              
-              >
+              <div className={`${styles.hover_content}`}>
                 <div className={styles.content_container}>
                   <p className={styles.paragraph}>
                     Hi, I'm Rendy Ihsan, a math graduate passionate about front-end web development.
@@ -53,14 +66,13 @@ export default function AboutPage() {
             </a>
           </div>
           <div className={styles.navigation_item}>
-            <a className={`${styles.navigation_link} ${styles.navigation_link2}`} onClick={() => toggleParagraph('projects')}>
+            <a ref={text1}className={`${styles.navigation_link} ${styles.navigation_link2}`}>
               <span data-text="Projects">Projects</span>
-              <div className={`${styles.hover_content} ${showProjects ? styles.show__paragraph : ''}`}>
+              <div className={`${styles.hover_content}`}>
                 <p>This is information about my projects.</p>
               </div>
             </a>
           </div>
-        </div>
       </div>
     </section>
   );

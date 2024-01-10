@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'Fontbaru';
-    src: url('/fonts/fontbaru.ttf') format('ttf');
-    /* Tambahkan varian lain jika diperlukan (mis., Bold, Italic) */
-  }
 
   body{
     margin: 0;
@@ -11,3 +6,5 @@
     height: 100%;
     overflow-x:hidden;
   }
+
+  a{ text-decoration: none;}
