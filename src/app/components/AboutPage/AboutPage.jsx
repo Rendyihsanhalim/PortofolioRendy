@@ -57,9 +57,9 @@ export default function AboutPage() {
               <div className={`${styles.hover_content}`}>
                 <div className={styles.content_container}>
                   <p className={styles.paragraph}>
-                    Hi, I'm Rendy Ihsan, a math graduate passionate about front-end web development.
-                    With a knack for analytical thinking, I'm dedicated to mastering front-end technologies, believing in the impact of intuitive user interfaces.
-                    As a committed learner and creative coder, I enjoy turning ideas into reality. Let's connect and explore the exciting world of web development!
+                    Hi, I&apos;m Rendy Ihsan, a math graduate passionate about front-end web development.
+                    With a knack for analytical thinking, I&apos;m dedicated to mastering front-end technologies, believing in the impact of intuitive user interfaces.
+                    As a committed learner and creative coder, I enjoy turning ideas into reality. Let&apos;s connect and explore the exciting world of web development!
                   </p>
                 </div>
               </div>
