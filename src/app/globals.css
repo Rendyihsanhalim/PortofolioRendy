@@ -10,5 +10,5 @@
   a{ text-decoration: none;}
 
   .Page{
-    background: linear-gradient(180deg,white,rgb(255, 249, 249),rgba(255, 255, 255, 0.795),rgb(247, 247, 247),rgb(253, 243, 243),rgb(255, 255, 255),rgba(233, 233, 233, 0.966),rgba(230, 216, 216, 0.425),white)
-  }
+    background: rgb(159,173,214);
+background: radial-gradient(circle, rgba(159,173,214,0.8961748633879781) 0%, rgba(255,255,255,1) 51%);}
