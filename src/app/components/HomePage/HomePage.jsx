@@ -1,7 +1,7 @@
 // components/Home.js
-import { useEffect } from 'react';
+"use client"
 import styles from './styles.module.css'; 
-import LocomotiveScroll from 'locomotive-scroll';
+
 
 
 export default function HomePage() {
@@ -28,7 +28,7 @@ export default function HomePage() {
       <div className={styles.home__description}>
         <div className={styles.home_description_best}>
           
-        <p className="home__designer">
+        <p className={styles.home__designer}>
           Development & Design
         </p>
 
