@@ -8,3 +8,7 @@
   }
 
   a{ text-decoration: none;}
+
+  .Page{
+    background: linear-gradient(180deg,white,rgb(255, 249, 249),rgba(255, 255, 255, 0.795),rgb(247, 247, 247),rgb(253, 243, 243),rgb(255, 255, 255),rgba(233, 233, 233, 0.966),rgba(230, 216, 216, 0.425),white)
+  }

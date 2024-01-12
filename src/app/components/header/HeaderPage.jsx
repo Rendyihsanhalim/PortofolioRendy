@@ -25,9 +25,7 @@ export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
 
-  useEffect( () => {
-    if(isActive) setIsActive(false)
-  }, [pathname])
+
 
   return (
     <>
