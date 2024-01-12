@@ -1,7 +1,7 @@
 // components/Home.js
 import { useEffect } from 'react';
 import styles from './styles.module.css'; 
-
+import LocomotiveScroll from 'locomotive-scroll';
 
 
 export default function HomePage() {
@@ -31,6 +31,7 @@ export default function HomePage() {
         <p className="home__designer">
           Development & Design
         </p>
+
         </div>
 
       </div>
