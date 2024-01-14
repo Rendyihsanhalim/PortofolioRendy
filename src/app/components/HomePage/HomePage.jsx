@@ -29,7 +29,10 @@ export default function HomePage() {
         <div className={styles.home_description_best}>
           
         <p className={styles.home__designer}>
-          Development & Design
+          Development &
+        </p>
+        <p className={styles.home__designer}>
+          Design
         </p>
 
         </div>

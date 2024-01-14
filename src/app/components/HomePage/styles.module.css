@@ -12,14 +12,15 @@
 }
 .home {
     margin: 0 3rem;
-    height: 100vh;
+
     width: 100%;
     
   }
   
   .home_container {
     display:grid;
-    grid-template-columns: repeat(2,max-content);
+    grid-template-columns: 850px 150px;
+    position: relative;
   }
   
   .home_text {
@@ -29,7 +30,6 @@
     margin-top:13rem;
     font-weight: 900;
     font-size: 8rem;
-    height: 100vh;
     line-height: 7rem;
     width:850px;
   }
@@ -39,15 +39,122 @@
  .home_h1_3{
   font-size: 10rem;
  }
- .home_description{
+ .home__description{
   width: 150px;
  }
  .home_description_best{
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   font-size: 2rem;
-  font-family: "Helvetica";
+  font-family: "Poppins";
   font-weight: 600;
+ }
+
+ .home_container::before{
+  position: absolute;
+  content: "";
+  z-index: 1;
+  right:150px;
+  bottom: 300px;
+  width:250px;
+  height:250px;
+  border-radius: 50%;
+  filter: blur(60px);
+  background: rgb(200,189,209);
+
+ }
+
+
+
+ @media screen and (max-width: 320px)  {
+    .home{
+      margin: 0 1rem;
+    }
+    .home_container{
+    grid-template-columns:100px 160px ;
+  }
+    .home_text{
+      line-height: 2.5rem;
+      margin-top: 20rem;
+      width:100px;
+    }
+
+    .home_description{
+      width:10px;
+    }
+    .home_h1{
+      font-size: 2rem;
+    }
+    
+    .home_h1_2{
+      font-size: 2.5rem;
+    }
+    
+    .home_h1_3{
+      font-size:3.5rem;
+    }
+    
+    .home_description_best{
+      margin-top: 5rem;
+      font-size: 1rem;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: normal;
+
+
+    }
+    .home__designer{
+      margin:0;
+    }
+ }
+
+ @media screen and (min-width: 320px)  {
+    .home{
+      margin: 0 1rem;
+    }
+    .home_container{
+      grid-template-columns:200px 160px ;
+    }
+    .home_text{
+      line-height: 4rem;
+      margin-top: 25rem;
+      width:250px;
+    }
+
+    .home_description{
+      width:50px;
+    }
+    .home_h1{
+      font-size: 3.5rem;
+    }
+    
+    .home_h1_2{
+      font-size: 4.5rem;
+    }
+    
+    .home_h1_3{
+      font-size:5.5rem;
+    }
+    
+    .home_description_best{
+      margin-top: 5rem;
+      font-size: 1rem;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: normal;
+    }
+
+    .home_container::before{
+      left:20px;
+      top:10px;
+      width:150px;
+      height:150px;
+    
+     }
+     .home__designer{
+      margin: 0;
+     }
  }

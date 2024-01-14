@@ -87,7 +87,6 @@ cursor: pointer;
   }
   
   .main.active {
-
     transform: scale(1);
   }
   
@@ -147,6 +146,9 @@ cursor: pointer;
     .nav__menu {
       display: none;
     }
+    .nav{
+      margin-inline:0.5rem;
+    }
   }
   
 
@@ -156,7 +158,7 @@ cursor: pointer;
   .nav{
     height: calc(3.5rem+ 2rem);
     width: 90%;
-    margin-inline:3rem;
+    margin-inline:5rem;
     gap:1.75rem;
   }
 

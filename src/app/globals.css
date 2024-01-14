@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Poppins:wght@500;700;900&family=Roboto:wght@900&display=swap');
 
   body{
     margin: 0;
@@ -10,5 +11,14 @@
   a{ text-decoration: none;}
 
   .Page{
-    background: rgb(159,173,214);
-background: radial-gradient(circle, rgba(159,173,214,0.8961748633879781) 0%, rgba(255,255,255,1) 51%);}
+    overflow-x:hidden;
+    height: 100vh;
+    background: rgb(205,210,255);
+background: radial-gradient(circle, rgba(205,210,255,1) 0%, rgba(255,255,255,1) 46%)};
+
+@media screen and (min-width: 320px)  {
+  .Page{
+    overflow-x: hidden;
+    background: radial-gradient(circle, rgba(205,210,255,1) 0%, rgba(255,255,255,1) 25%)
+  };
+  }
