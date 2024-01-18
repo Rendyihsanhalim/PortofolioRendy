@@ -30,7 +30,6 @@ export default function Home() {
       // Tentukan nilai 40 px untuk mengaktifkan isActive
       if (scrollPosition >= 40) {
         setIsDrag(!isDrag);
-        setIsActive(!isActive)
       } else {
         setIsDrag(false);
       }
