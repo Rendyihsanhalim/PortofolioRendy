@@ -10,61 +10,68 @@
   font-family: 'Helvetica';
   src: url('/fonts/NeueHelveticaBQBlack.ttf') format('truetype');
 }
-.home {
-    margin: 0 3rem;
 
-    width: 100%;
-    
-  }
-  
-  .home_container {
-    display:grid;
-    grid-template-columns: 850px 150px;
-    position: relative;
-  }
-  
-  .home_text {
-    font-family: "Helvetica";
-    display: flex;
-    flex-direction: column;
-    margin-top:13rem;
-    font-weight: 900;
-    font-size: 8rem;
-    line-height: 7rem;
-    width:850px;
-  }
-  .home_h1{
-    font-size: 6rem;
-  }
- .home_h1_3{
-  font-size: 10rem;
- }
- .home__description{
-  width: 150px;
- }
- .home_description_best{
+.home{
+  margin: 0 1rem;
+}
+.home_container{
+  grid-template-columns:50% 50% ;
+  display: grid;
   position: relative;
-  z-index: 10;
+}
+.home_text{
+  font-family: "Helvetica";
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
+  line-height: 4rem;
+  margin-top: 25rem;
+  width:250px;
+  flex-direction: column;
+  font-weight: 900;
+  font-size: 8rem;
+}
+.home__description{
+  width: 110%;
+}
+
+.home_h1{
+  font-size: 3.5rem;
+}
+
+.home_h1_2{
+  font-size: 4.5rem;
+}
+
+.home_h1_3{
+  font-size:5.5rem;
+}
+
+.home_description_best{
+  margin: 5rem 0 0 2rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: normal;
   font-family: "Poppins";
   font-weight: 600;
- }
+  position: relative;
+  z-index: 10;
+}
 
- .home_container::before{
+.home_container::before{
   position: absolute;
   content: "";
   z-index: 1;
-  right:150px;
-  bottom: 300px;
-  width:250px;
-  height:250px;
+  left:20px;
+  top:10px;
+  width:150px;
+  height:150px;
   border-radius: 50%;
   filter: blur(60px);
   background: rgb(200,189,209);
-
+ }
+ .home__designer{
+  margin: 0;
  }
 
 
@@ -111,50 +118,125 @@
     }
  }
 
- @media screen and (min-width: 320px)  {
-    .home{
-      margin: 0 1rem;
-    }
-    .home_container{
-      grid-template-columns:200px 160px ;
-    }
-    .home_text{
-      line-height: 4rem;
-      margin-top: 25rem;
-      width:250px;
-    }
 
-    .home_description{
-      width:50px;
-    }
-    .home_h1{
-      font-size: 3.5rem;
-    }
-    
-    .home_h1_2{
-      font-size: 4.5rem;
-    }
-    
-    .home_h1_3{
-      font-size:5.5rem;
-    }
-    
-    .home_description_best{
-      margin-top: 5rem;
-      font-size: 1rem;
-      justify-content: flex-start;
-      flex-direction: column;
-      align-items: normal;
-    }
 
-    .home_container::before{
-      left:20px;
-      top:10px;
-      width:150px;
-      height:150px;
+ @media screen and (min-width: 576px)  {
+  .home{
+    margin: 0 2rem;
+  }
+  .home_container{
+    grid-template-columns:300px max-content ;
+  }
+
+
+  .home__description{
+    width:105%;
+
+  }  
+  .home_description_best{
+    font-size: 1.25rem;
+    justify-content: space-between;
+    flex-direction: row;
+ 
+}
+ }
+ @media screen and (min-width: 768px)  {
+  .home{
+    margin: 0 3rem;
+  }
+  .home_container{
+    grid-template-columns:500 max-content ;
+  }
+  .home_text{
+    line-height: 5rem;
+  }
+  .home_h1{
+    font-size: 5rem;
+  }
+  
+  .home_h1_2{
+    font-size: 6rem;
+  }
+  
+  .home_h1_3{
+    font-size:7rem;
+  }
+  
+  .home__description{
+    width:105%;
+
+  }  
+  .home_description_best{
+    font-size: 1.75rem;
+    justify-content: space-between;
+    flex-direction: row;
+ 
+}
+ }
+
+
+
+ @media screen and (min-width: 1023px)  {
+  .home {
+    margin: 0 3rem;
+    width: 100%;
     
-     }
-     .home__designer{
-      margin: 0;
-     }
+  }
+  
+  .home_container {
+    display:grid;
+    grid-template-columns: 600px 400px;
+    position: relative;
+  }
+  
+  .home_text {
+    position: relative;
+    font-family: "Helvetica";
+    display: flex;
+    flex-direction: column;
+    margin-top:13rem;
+    font-weight: 900;
+    font-size: 8rem;
+    line-height: 7rem;
+    width:850px;
+    z-index: 10;
+  }
+  .home_h1{
+    font-size: 6rem;
+  }
+  .home_h1_2{
+    font-size: 8rem;
+  }
+ .home_h1_3{
+  font-size: 10rem;
+ }
+ .home__description{
+  width:110%;
+ }
+ .home_description_best{
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: "Poppins";
+  font-weight: 600;
+  gap:1rem;
+ }
+
+ .home_container::before{
+  position: absolute;
+  content: "";
+  z-index: 1;
+  right:150px;
+  bottom: 300px;
+  width:250px;
+  height:250px;
+  border-radius: 50%;
+  filter: blur(60px);
+  background: rgb(200,189,209);
+
+ }
+
  }

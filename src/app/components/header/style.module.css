@@ -13,8 +13,8 @@
 /*=============== HEADER & NAV ===============*/
 .header {
     width: 100%;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     z-index: 100;
 
 }
@@ -78,7 +78,8 @@ cursor: pointer;
   .main {
     padding: 30px;
     position: fixed;
-    right: 0;
+    right: -20px;
+    top:10px;
     z-index: 1000;
   
     transform: scale(0);
@@ -88,6 +89,7 @@ cursor: pointer;
   
   .main.active {
     transform: scale(1);
+    overflow-y: hidden;
   }
   
   .button {
@@ -114,21 +116,29 @@ cursor: pointer;
     margin: auto;
     background-color: white;
     position: relative;
-    transition: transform 0.3s;
+    transition: transform 0.2s;
   }
   
   .burger::after {
-    transform: rotate(45deg);
-    top: 43px;
+    top: -5px;
   }
-  
   .burger::before {
-    transform: rotate(-45deg);
-    top: 33px;
+    top: 5px;
   }
   
+ 
+  /* CSS */
 
-  
+.burgerActive::after {
+  transform: rotate(45deg);
+  top: -1px;
+}
+
+.burgerActive::before {
+  transform: rotate(-45deg);
+  top: 0px;
+}
+
   
 /* Show menu */
 
@@ -138,7 +148,7 @@ cursor: pointer;
 /* For small devices */
 
 
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 650px) {
     .container {
       margin-inline: 1.5rem;
     }
@@ -147,19 +157,17 @@ cursor: pointer;
       display: none;
     }
     .nav{
-      margin-inline:0.5rem;
+      margin-inline:1rem;
     }
   }
   
 
 
 /* For large devices */
-@media screen and (min-width:567px){
+@media screen and (min-width:650px){
   .nav{
     height: calc(3.5rem+ 2rem);
-    width: 90%;
-    margin-inline:5rem;
-    gap:1.75rem;
+    margin-inline:3rem;
   }
 
   .nav__toggle{
