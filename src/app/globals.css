@@ -10,9 +10,7 @@
   }
 
   a{ text-decoration: none;}
-  .all{
-    overflow-x: hidden;
-  }
+
   .Page{
     overflow-x:hidden;
     overflow-y: hidden;

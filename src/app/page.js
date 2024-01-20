@@ -11,7 +11,7 @@ export default function Home() {
         <Header />
         <HomePage />
       </div>
-      <AboutPage className="all" />
+      <AboutPage />
     </div>
   );
 }
