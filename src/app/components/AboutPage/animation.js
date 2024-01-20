@@ -2,14 +2,14 @@ export const slideUp = {
     initial: {
         y: "100%",
     },
-    open: (i) => ({
+    open: {
         y: "0%",
-        transition: {duration: 0.8, delay: 0.05 * i}
-    }),
-    closed:(i) => ({
+        transition: {duration: 0.8, delay: 0.05}
+    },
+    closed:{
         y: "100%",
-        transition: {duration: 0.8,delay:0.05 * i}
-    }),
+        transition: {duration: 0.8,delay:0.05 }
+    },
 }
 
 export const opacity = {
