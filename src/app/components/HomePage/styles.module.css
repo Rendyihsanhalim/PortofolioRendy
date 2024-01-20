@@ -68,7 +68,7 @@
   z-index: 10;
 }
 
-.home_container::before{
+.home__gambar1{
   position: absolute;
   content: "";
   z-index: 1;
@@ -232,7 +232,7 @@
   gap:1rem;
  }
 
- .home_container::before{
+ .home__gambar1{
   position: absolute;
   content: "";
   z-index: 1;

@@ -36,7 +36,9 @@ export default function HomePage() {
         </p>
 
         </div>
+      <div className={styles.home__gambar1}>
 
+      </div>
       </div>
     </div>
   </section>
