@@ -11,7 +11,7 @@ export default function AboutPage() {
 
   const handleScroll = () => {
     const viewportHeight = window.innerHeight;
-    const threshold = viewportHeight / 3.5; // Adjust the divisor as needed
+    const threshold = viewportHeight / 12; // Adjust the divisor as needed
 
     if (window.scrollY >= threshold) {
       setIsInView(true);
