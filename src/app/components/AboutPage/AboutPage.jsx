@@ -1,79 +1,55 @@
-// pages/AboutPage.js
-import { useState, useRef, useEffect } from 'react';
-import styles from './styles.module.css';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+"use client";
+import styles from "./styles.module.css";
+import { motion } from "framer-motion";
+import { slideUp } from "./animation";
+import { useState, useEffect } from "react";
 
 export default function AboutPage() {
-  const text = useRef(null);
-  const overlay = useRef(null);
-  const text1 =useRef(null);
+  const [isInView, setIsInView] = useState(false);
+  const phrase =
+    "Create the best development and design for the client, taking the best things into consideration.";
+
+  const handleScroll = () => {
+    const viewportHeight = window.innerHeight;
+    const threshold = viewportHeight / 4; // Adjust the divisor as needed
+
+    if (window.scrollY >= threshold) {
+      setIsInView(true);
+      console.log("aku nampak");
+    } else {
+      setIsInView(false);
+    }
+  };
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    window.addEventListener("scroll", handleScroll);
 
-    gsap.fromTo(
-      text.current,
-      {
-        opacity: 0,
-        x: '-100%',
-      },
-      {
-        scrollTrigger: {
-          trigger: overlay.current,
-
-          start: 'top 150px',
-          end: 'top 300px',
-        },
-        opacity: 1,
-        x: '0%',
-      }
-    );
-    gsap.fromTo(
-      text1.current,
-      {
-        opacity: 0,
-        left: '-100%',
-      },
-      {
-        scrollTrigger: {
-          trigger: overlay.current,
-
-          start: 'top 50px',
-          end: 'top 300px',
-        },
-        opacity: 1,
-        left: '0%',
-      }
-    );
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
-    <section ref={overlay} className={styles.overlay}>
-      <div className={styles.navigation_wrapper}>
-          <div className={`${styles.navigation_item}`}>
-            <a ref={text} className={`${styles.navigation_link} ${styles.navigation_link1}`}>
-              <span data-text="AboutMe">AboutMe</span>
-              <div className={`${styles.hover_content}`}>
-                <div className={styles.content_container}>
-                  <p className={styles.paragraph}>
-                    Hi, I&apos;m Rendy Ihsan, a math graduate passionate about front-end web development.
-                    With a knack for analytical thinking, I&apos;m dedicated to mastering front-end technologies, believing in the impact of intuitive user interfaces.
-                    As a committed learner and creative coder, I enjoy turning ideas into reality. Let&apos;s connect and explore the exciting world of web development!
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div className={styles.navigation_item}>
-            <a ref={text1}className={`${styles.navigation_link} ${styles.navigation_link2}`}>
-              <span data-text="Projects">Projects</span>
-              <div className={`${styles.hover_content}`}>
-                <p>This is information about my projects.</p>
-              </div>
-            </a>
-          </div>
-      </div>
-    </section>
+    <motion.div className={styles.about_container}>
+      <p>
+        {phrase.split(" ").map((word, index) => {
+          const isDevelopmentOrDesign = ["development", "design"].includes(word.toLowerCase());
+          const spanClass = isDevelopmentOrDesign ? `${styles.about_paragraph} ${styles.color_blue}` : styles.about_paragraph;
+
+          return (
+            <span key={index} className={spanClass}>
+              <motion.span
+                variants={slideUp}
+                custom={index}
+                animate={isInView ? "open" : "closed"}
+                key={index}
+              >
+                {word}
+              </motion.span>
+            </span>
+          );
+        })}
+      </p>
+    </motion.div>
   );
 }

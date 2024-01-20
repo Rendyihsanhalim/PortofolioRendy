@@ -28,7 +28,7 @@ export default function Home() {
       const scrollPosition = window.scrollY;
 
       // Tentukan nilai 40 px untuk mengaktifkan isActive
-      if (scrollPosition >= 40) {
+      if (scrollPosition >= 80) {
         setIsDrag(!isDrag);
       } else {
         setIsDrag(false);
@@ -49,7 +49,7 @@ export default function Home() {
     <header className={`${styles.header} ${isActive ? styles.headerActive : ""}`} id="header">
       <nav className={`${styles.nav} container`}>
         <div href="/">
-          <a className={styles.nav__logo}>PORTFOLIO</a>
+          <a className={styles.nav__logo}>®</a>
         </div>
 
         <div

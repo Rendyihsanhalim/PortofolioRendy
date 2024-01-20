@@ -16,7 +16,7 @@
     top: 0px;
     left: 0px;
     z-index: 100;
-
+   overflow-x: hidden;
 }
 
 
@@ -74,11 +74,13 @@ cursor: pointer;
     transform-origin: bottom left;
     transform: scale(1, 1);
   }
-
+.nav__logo{
+  font-size: 3rem;
+}
   .main {
     padding: 30px;
     position: fixed;
-    right: -20px;
+    right: 10px;
     top:10px;
     z-index: 1000;
   

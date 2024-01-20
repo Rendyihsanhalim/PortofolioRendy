@@ -1,104 +1,39 @@
-.overlay {
-    width: 100%;
-    height: 1000px;
-    background:linear-gradient(180deg,white,rgba(110, 103, 103, 0.445),rgba(110, 105, 105, 0.445),white);
-    margin-top: 8rem;
 
+@font-face {
+    font-family: 'GeneralSans-Medium';
+    src: url('/fonts/GeneralSans-Medium.otf') format('opentype');
   }
-  
-  .navigation_wrapper {
-    margin-top: 100px;
-    margin-left: 50px;
-    position: absolute;
-    cursor: pointer;
-    
-  }
-  
-  .navigation_container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 3.5rem;
-    margin-top: 5rem;
-  }
-  
-  .navigation_link span {
-    display: block;
-    user-select: none;
-    margin: 20px 0;
-    font-family: "Fontbaru";
-    font-size: 78px; /* Adjusted font size */
-  }
-  .hover-content p {
-    font-size: 1.5rem;
-    font-family: "Montserrat";
-    line-height: 1.6rem;
-  }
-  
-  .content-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .content-container img{
-    width:300px;
-    margin-bottom:5rem;
-  }
-  
-  .navigation_link {
-    color: rgb(0, 0, 0);
-    position: relative;
-    display: inline-block;
-    transition: margin-bottom 1s ease; /* Added transition for smooth effect */
-  }
-  
-  .show-link {
-    margin-bottom: 15rem;
-  }
-  
-  .show__paragraph {
-    left: 0;
-  }
-  
-  
-  .hover-content {
-    position: absolute;
-    top: 100%;
-    left: -1000%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
-    width: 1000px;
-    display: flex;
-    justify-content: space-between;
-    transition: left 0.8s;
-  }
-  
-  .slide-in {
-    left: 0;
-    transform: translateX(10%); /* Initial position off-screen to the right */
-  }
-  
-  .show__paragraph {
-    display: block;
-  }
-  
-  .navigation_wrapper span:before {
-    width: 0;
-    color: white;
-    overflow: hidden;
-    position: absolute;
-    content: attr(data-text);
-    transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
-  }
-  
-  .navigation_wrapper span:hover:before {
-    width: 100%;
-  }
-  
-  .project-preview-wrapper {
-    width: 100%;
+
+  .about_container{
     height: 100vh;
     display: flex;
     justify-content: center;
-    position: fixed;
+    margin:0 1rem;
+    position: relative;
+    z-index: -10;
+  }
+
+  .about_paragraph{
+
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 4px;
+    margin-bottom:4px;
+    font-size: clamp(2.5rem,6.5vw,10rem);
+    font-weight: 700;
+    font-family: "GeneralSans-Medium";
+  }
+
+  .color_blue{
+    color:rgba(84, 101, 255, 0.993);
+  }
+
+
+  @media screen and (min-width: 768px)  {
+   .about_container{
+    margin:0 3rem;
+   } 
+   .about_paragraph{
+    margin-right: 10px;
+   }
   }
