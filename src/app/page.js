@@ -11,7 +11,6 @@ export default function Home() {
         <Header />
         <HomePage />
       </div>
-      <AboutPage />
     </div>
   );
 }
