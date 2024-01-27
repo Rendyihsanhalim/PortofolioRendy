@@ -3,6 +3,7 @@ import HomePage from "./components/HomePage/HomePage";
 import AboutPage from "./components/AboutPage/AboutPage";
 import Header from "./components/header/HeaderPage";
 import { useEffect } from "react";
+import ProjectPage from "./components/ProjectPage/ProjectPage";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <HomePage />
       </div>
       <AboutPage />
+      <ProjectPage/>
     </div>
   );
 }
