@@ -18,12 +18,5 @@
   .Page{
     overflow-x:hidden;
     overflow-y: hidden;
-    background: rgb(205,210,255);
-    background: radial-gradient(circle, rgba(205,210,255,1) 0%, rgba(255,255,255,1) 46%)};
 
-@media screen and (min-width: 320px)  {
-  .Page{
-    overflow-x: hidden;
-    background: radial-gradient(circle, rgba(205,210,255,1) 0%, rgba(255,255,255,1) 25%)
-  };
   }

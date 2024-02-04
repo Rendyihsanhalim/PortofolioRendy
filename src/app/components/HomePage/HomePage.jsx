@@ -37,7 +37,9 @@ export default function HomePage() {
 
         </div>
       <div className={styles.home__gambar1}>
-
+          <div className={styles.home_circle1}></div>
+          <div className={styles.home_circle2}></div>
+          <div className={styles.home_circle3}></div>
       </div>
       </div>
     </div>

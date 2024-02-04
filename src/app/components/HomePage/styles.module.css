@@ -69,16 +69,43 @@
 }
 
 .home__gambar1{
+  position: relative;
+ }
+
+ .home_circle1{
   position: absolute;
-  content: "";
+  z-index: -1;
+  left:-150px;
+  top:90px;
+  width:300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(60px);
+  background: rgb(175, 169, 255);
+ }
+
+ .home_circle2{
+
+  position: absolute;
   z-index: 1;
   left:20px;
-  top:10px;
+  width:150px;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(60px);
+  background: rgb(200,189,209);
+ }
+ .home_circle3{
+
+  position: absolute;
+  z-index: 1;
+  right:250px;
+  top:-80px;
   width:150px;
   height:150px;
   border-radius: 50%;
   filter: blur(60px);
-  background: rgb(200,189,209);
+  background: rgb(252, 164, 82);
  }
  .home__designer{
   margin: 0;
