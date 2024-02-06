@@ -81,7 +81,7 @@
   height: 300px;
   border-radius: 50%;
   filter: blur(90px);
-  background: rgb(71, 58, 255);
+  background: rgb(147, 139, 255);
  }
 
  .home_circle2{
@@ -94,7 +94,7 @@
   height: 350px;
   border-radius: 50%;
   filter: blur(90px);
-  background: rgb(135, 2, 243);
+  background: rgb(209, 152, 255);
  }
  .home_circle3{
 
@@ -106,7 +106,7 @@
   height:350px;
   border-radius: 50%;
   filter: blur(90px);
-  background: rgb(255, 150, 52);
+  background: rgb(245, 175, 110);
  }
  .home__designer{
   margin: 0;
