@@ -75,37 +75,38 @@
  .home_circle1{
   position: absolute;
   z-index: -1;
-  left:-150px;
+  left:-70px;
   top:90px;
   width:300px;
   height: 300px;
   border-radius: 50%;
-  filter: blur(60px);
-  background: rgb(175, 169, 255);
+  filter: blur(90px);
+  background: rgb(71, 58, 255);
  }
 
  .home_circle2{
 
   position: absolute;
-  z-index: 1;
-  left:20px;
-  width:150px;
-  height: 150px;
+  z-index: -1;
+  right:130px;
+  top:140px;
+  width:350px;
+  height: 350px;
   border-radius: 50%;
-  filter: blur(60px);
-  background: rgb(200,189,209);
+  filter: blur(90px);
+  background: rgb(135, 2, 243);
  }
  .home_circle3{
 
   position: absolute;
   z-index: 1;
-  right:250px;
-  top:-80px;
-  width:150px;
-  height:150px;
+  right:130px;
+  top:-165px;
+  width:350px;
+  height:350px;
   border-radius: 50%;
-  filter: blur(60px);
-  background: rgb(252, 164, 82);
+  filter: blur(90px);
+  background: rgb(255, 150, 52);
  }
  .home__designer{
   margin: 0;
