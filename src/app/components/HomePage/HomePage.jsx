@@ -13,8 +13,8 @@ export default function HomePage() {
             <motion.span
               key={index}
               initial={{ x:50,y:-200 }}
-              animate={{ x:0,y:0 }}
-              transition={{duration:1}}
+              animate={{ x:0,y:0,delay:4 }}
+              transition={{duration:2}}
               exit={{ opacity: 1 }}
               className={index === 0 ? styles.home_h1 : styles[`home_h1_${index + 1}`]}
             >
