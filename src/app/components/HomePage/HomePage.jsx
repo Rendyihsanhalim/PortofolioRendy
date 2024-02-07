@@ -12,9 +12,9 @@ export default function HomePage() {
           {KATA.map((word, index) => (
             <motion.span
               key={index}
-              initial={{ x:50,y:-200 }}
-              animate={{ x:0,y:0,delay:4 }}
-              transition={{duration:2}}
+              initial={{ x:-100,opacity:0 }}
+              animate={{ x:0,delay:0.1 * index ,opacity:1}}
+              transition={{duration:1}}
               exit={{ opacity: 1 }}
               className={index === 0 ? styles.home_h1 : styles[`home_h1_${index + 1}`]}
             >
