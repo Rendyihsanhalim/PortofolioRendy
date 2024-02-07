@@ -193,7 +193,14 @@ cursor: pointer;
     .nav{
       margin-inline:1rem;
     }
+   .main{
+    right:-15px;
+   } 
 
+   .button{
+    width:65px;
+    height: 65px;
+   }
 }
 
 /* For large devices */
@@ -214,6 +221,10 @@ cursor: pointer;
  .nav__list{
   flex-direction: row;
   column-gap: 4rem;
+ }
+ .button{
+  width: 80px;
+  height: 80px;
  }
 }
 
